@@ -65,7 +65,7 @@ class TemplateData {
             this.label = null;
         } else if (this.timeDiff.diffDays >= 1) {
             if (!this.timeDiff.isPast)
-                this.date = this.timeDiff.diffDays + 1;
+                this.date = `${this.timeDiff.diffDays + 1} T-${this.pad(this.timeDiff.relHours, 2)}:${this.pad(this.timeDiff.relMinutes, 2)}:${this.pad(this.timeDiff.relSeconds, 2)}`;
             else
                 this.date = this.timeDiff.diffDays;
         } else {
